@@ -1,0 +1,181 @@
+{
+    'AutoScalingGroups': [
+        {
+            'AutoScalingGroupName': 'string',
+            'AutoScalingGroupARN': 'string',
+            'LaunchConfigurationName': 'string',
+            'LaunchTemplate': {
+                'LaunchTemplateId': 'string',
+                'LaunchTemplateName': 'string',
+                'Version': 'string'
+            },
+            'MixedInstancesPolicy': {
+                'LaunchTemplate': {
+                    'LaunchTemplateSpecification': {
+                        'LaunchTemplateId': 'string',
+                        'LaunchTemplateName': 'string',
+                        'Version': 'string'
+                    },
+                    'Overrides': [
+                        {
+                            'InstanceType': 'string',
+                            'WeightedCapacity': 'string',
+                            'LaunchTemplateSpecification': {
+                                'LaunchTemplateId': 'string',
+                                'LaunchTemplateName': 'string',
+                                'Version': 'string'
+                            },
+                            'InstanceRequirements': {
+                                'VCpuCount': {
+                                    'Min': 123,
+                                    'Max': 123
+                                },
+                                'MemoryMiB': {
+                                    'Min': 123,
+                                    'Max': 123
+                                },
+                                'CpuManufacturers': [
+                                    'intel'|'amd'|'amazon-web-services',
+                                ],
+                                'MemoryGiBPerVCpu': {
+                                    'Min': 123.0,
+                                    'Max': 123.0
+                                },
+                                'ExcludedInstanceTypes': [
+                                    'string',
+                                ],
+                                'InstanceGenerations': [
+                                    'current'|'previous',
+                                ],
+                                'SpotMaxPricePercentageOverLowestPrice': 123,
+                                'OnDemandMaxPricePercentageOverLowestPrice': 123,
+                                'BareMetal': 'included'|'excluded'|'required',
+                                'BurstablePerformance': 'included'|'excluded'|'required',
+                                'RequireHibernateSupport': True|False,
+                                'NetworkInterfaceCount': {
+                                    'Min': 123,
+                                    'Max': 123
+                                },
+                                'LocalStorage': 'included'|'excluded'|'required',
+                                'LocalStorageTypes': [
+                                    'hdd'|'ssd',
+                                ],
+                                'TotalLocalStorageGB': {
+                                    'Min': 123.0,
+                                    'Max': 123.0
+                                },
+                                'BaselineEbsBandwidthMbps': {
+                                    'Min': 123,
+                                    'Max': 123
+                                },
+                                'AcceleratorTypes': [
+                                    'gpu'|'fpga'|'inference',
+                                ],
+                                'AcceleratorCount': {
+                                    'Min': 123,
+                                    'Max': 123
+                                },
+                                'AcceleratorManufacturers': [
+                                    'nvidia'|'amd'|'amazon-web-services'|'xilinx',
+                                ],
+                                'AcceleratorNames': [
+                                    'a100'|'v100'|'k80'|'t4'|'m60'|'radeon-pro-v520'|'vu9p',
+                                ],
+                                'AcceleratorTotalMemoryMiB': {
+                                    'Min': 123,
+                                    'Max': 123
+                                }
+                            }
+                        },
+                    ]
+                },
+                'InstancesDistribution': {
+                    'OnDemandAllocationStrategy': 'string',
+                    'OnDemandBaseCapacity': 123,
+                    'OnDemandPercentageAboveBaseCapacity': 123,
+                    'SpotAllocationStrategy': 'string',
+                    'SpotInstancePools': 123,
+                    'SpotMaxPrice': 'string'
+                }
+            },
+            'MinSize': 123,
+            'MaxSize': 123,
+            'DesiredCapacity': 123,
+            'PredictedCapacity': 123,
+            'DefaultCooldown': 123,
+            'AvailabilityZones': [
+                'string',
+            ],
+            'LoadBalancerNames': [
+                'string',
+            ],
+            'TargetGroupARNs': [
+                'string',
+            ],
+            'HealthCheckType': 'string',
+            'HealthCheckGracePeriod': 123,
+            'Instances': [
+                {
+                    'InstanceId': 'string',
+                    'InstanceType': 'string',
+                    'AvailabilityZone': 'string',
+                    'LifecycleState': 'Pending'|'Pending:Wait'|'Pending:Proceed'|'Quarantined'|'InService'|'Terminating'|'Terminating:Wait'|'Terminating:Proceed'|'Terminated'|'Detaching'|'Detached'|'EnteringStandby'|'Standby'|'Warmed:Pending'|'Warmed:Pending:Wait'|'Warmed:Pending:Proceed'|'Warmed:Terminating'|'Warmed:Terminating:Wait'|'Warmed:Terminating:Proceed'|'Warmed:Terminated'|'Warmed:Stopped'|'Warmed:Running'|'Warmed:Hibernated',
+                    'HealthStatus': 'string',
+                    'LaunchConfigurationName': 'string',
+                    'LaunchTemplate': {
+                        'LaunchTemplateId': 'string',
+                        'LaunchTemplateName': 'string',
+                        'Version': 'string'
+                    },
+                    'ProtectedFromScaleIn': True|False,
+                    'WeightedCapacity': 'string'
+                },
+            ],
+            'CreatedTime': datetime(2015, 1, 1),
+            'SuspendedProcesses': [
+                {
+                    'ProcessName': 'string',
+                    'SuspensionReason': 'string'
+                },
+            ],
+            'PlacementGroup': 'string',
+            'VPCZoneIdentifier': 'string',
+            'EnabledMetrics': [
+                {
+                    'Metric': 'string',
+                    'Granularity': 'string'
+                },
+            ],
+            'Status': 'string',
+            'Tags': [
+                {
+                    'ResourceId': 'string',
+                    'ResourceType': 'string',
+                    'Key': 'string',
+                    'Value': 'string',
+                    'PropagateAtLaunch': True|False
+                },
+            ],
+            'TerminationPolicies': [
+                'string',
+            ],
+            'NewInstancesProtectedFromScaleIn': True|False,
+            'ServiceLinkedRoleARN': 'string',
+            'MaxInstanceLifetime': 123,
+            'CapacityRebalance': True|False,
+            'WarmPoolConfiguration': {
+                'MaxGroupPreparedCapacity': 123,
+                'MinSize': 123,
+                'PoolState': 'Stopped'|'Running'|'Hibernated',
+                'Status': 'PendingDelete',
+                'InstanceReusePolicy': {
+                    'ReuseOnScaleIn': True|False
+                }
+            },
+            'WarmPoolSize': 123,
+            'Context': 'string',
+            'DesiredCapacityType': 'string'
+        },
+    ],
+    'NextToken': 'string'
+}
